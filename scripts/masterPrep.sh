@@ -31,6 +31,8 @@ echo $(date) " - Installing Docker 1.12.x"
 yum -y install docker
 sed -i -e "s#^OPTIONS='--selinux-enabled'#OPTIONS='--selinux-enabled --insecure-registry 172.30.0.0/16'#" /etc/sysconfig/docker
 
+find /etc/sysconfig -type f -exec sed -i -e 's/overlay2/devicemapper/g' {} \;
+
 # Create thin pool logical volume for Docker
 echo $(date) " - Creating thin pool logical volume for Docker and staring service"
 

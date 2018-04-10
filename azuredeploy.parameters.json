@@ -3,7 +3,7 @@
 	"contentVersion": "1.0.0.0",
 	"parameters": {
 		"_artifactsLocation": {
-			"value": "https://raw.githubusercontent.com/Microsoft/openshift-origin/master/"
+			"value": "https://raw.githubusercontent.com/eekwong/openshift-origin/release-3.6-devicemapper/"
 		},
 		"masterVmSize": {
 			"value": "Standard_DS2_v2"
